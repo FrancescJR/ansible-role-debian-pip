@@ -1,0 +1,14 @@
+---
+- hosts: all
+  remote_user: root
+
+
+
+  vars:
+    pip_install_packages:
+      # Test installing damn pyOpenSSL.
+      - name: pyOpenSSL
+        version: "17.5.0"
+
+  roles:
+    - francescjr.debian-pip
