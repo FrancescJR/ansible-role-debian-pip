@@ -6,9 +6,10 @@
     - build-essential
 
 
-- name: Install pip via easy install
-  command: easy_install pip
-  become: true
+- name: install pip via easy install
+  easy_install:
+    name: pip
+    state: latest
 
 - name: Ensure pip_install_packages are installed.
   pip:
