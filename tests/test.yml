@@ -11,4 +11,4 @@
         version: "17.5.0"
 
   roles:
-    - francescjr.debian-pip
+    - role_under_test
