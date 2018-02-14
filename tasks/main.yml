@@ -10,7 +10,7 @@
     verbosity: 4
 
 - debug:
-    msg: "Jessie value is  {{ jessie }} and {{ ansible_os_platform }}"
+    msg: "Jessie value is  {{ jessie }} and"
 
 - import_tasks: debian.yml
   when: jesie != ''
