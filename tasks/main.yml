@@ -1,4 +1,8 @@
 ---
 
+- name: get linux distro
+  shell: lsb_release -a | grep jessie
+  register: jessie
+
 - import_tasks: debian.yml
-  when: ansible_os_platform|lower == 'debian'
+  when: jesie != ''

@@ -17,8 +17,7 @@ script:
   - ${PWD}/tests/test.sh
 
   # Test whether packages are installed as specified.
-  - docker exec --tty ${container_id} pip list installed | grep -e '^ipaddress.*1\.0\.18.*$'
-  - docker exec --tty ${container_id} pip list installed | grep '^colorama'
+  - docker exec --tty ${container_id} pip list installed | grep -e '^pyOpenSSL.*17\.5\.1.*$'
 
 notifications:
 webhooks: https://galaxy.ansible.com/api/v1/notifications/
