@@ -2,10 +2,10 @@
 services: docker
 
 env:
-#  - distro: centos7
-#  - distro: fedora24
-#  - distro: ubuntu1604
-#  - distro: ubuntu1404
+  - distro: centos7
+  - distro: fedora24
+  - distro: ubuntu1604
+  - distro: ubuntu1404
   - distro: debian8
 
 script:
@@ -21,7 +21,7 @@ script:
   - ${PWD}/tests/test.sh
 
   # Test whether packages are installed as specified.
-  - docker exec --tty ${container_id} pip list installed | grep -e '^pyOpenSSL.*17\.5\.1.*$'
+  - docker exec --tty ${container_id} pip list installed | grep -e '^pyOpenSSL.*17\.5\.0.*$'
 
 notifications:
 webhooks: https://galaxy.ansible.com/api/v1/notifications/
