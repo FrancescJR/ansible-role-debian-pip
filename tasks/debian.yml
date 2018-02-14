@@ -6,7 +6,7 @@
     - build-essential
 
 - name: uninstall pip if its installed
-  command: easy_install -mxN PackageName
+  command: easy_install -mxN pip
   become: true
 
 - name: Install pip via easy install
