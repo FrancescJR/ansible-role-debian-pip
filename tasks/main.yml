@@ -4,5 +4,13 @@
   shell:  cat /etc/*-release | grep VERSION | grep jessie
   register: jessie
 
+- name: Display all variables/facts known for a host
+  debug:
+    var: hostvars[inventory_hostname]
+    verbosity: 4
+
+- debug:
+    msg: "Jessie value is  {{ jessie }} and {{ ansible_os_platform }}"
+
 - import_tasks: debian.yml
   when: jesie != ''
