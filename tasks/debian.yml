@@ -10,6 +10,7 @@
   easy_install:
     name: pip
     state: latest
+  become: true
 
 - name: Ensure pip_install_packages are installed.
   pip:
