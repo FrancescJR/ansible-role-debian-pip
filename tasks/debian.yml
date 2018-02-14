@@ -5,9 +5,19 @@
     - python-dev
     - build-essential
 
+- name: Get if pip is already installed variable
+  shell: which pip
+  register: which_result
+  ignore_errors: true
+
+- debug:
+    msg: "Jessie value is  {{ which_result }} and"
+
+
 - name: Install pip via easy install
   command: easy_install pip
   become: true
+  when: which_result.stdout == ''
 
 - name: Ensure pip_install_packages are installed.
   pip:
