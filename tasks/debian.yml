@@ -2,8 +2,8 @@
   apt: "name={{ item }} state=installed"
   with_items:
     - python-setuptools
-    - python-dev
-    - build-essential
+#    - python-dev
+#    - build-essential
   become: true
 
 
