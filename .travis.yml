@@ -2,9 +2,8 @@
 services: docker
 
 env:
-  - distro: ubuntu1604
   - distro: debian9
-  - distro: debian8
+#  - distro: debian8 <-- weird issue...
 
 script:
   # Configure test script so we can run extra tests after playbook is run.
