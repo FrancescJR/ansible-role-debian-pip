@@ -4,6 +4,7 @@
     - python-setuptools
     - python-dev
     - build-essential
+  become: true
 
 
 - name: install pip via easy install
@@ -11,6 +12,7 @@
     name: pip
     state: latest
   become: true
+  become_user: root
 
 - name: Ensure pip_install_packages are installed.
   pip:
